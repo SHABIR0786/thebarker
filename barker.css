@@ -1,0 +1,1282 @@
+@-webkit-keyframes spinnerRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#spin {
+    -webkit-animation: spinnerRotate 5s infinite linear;
+    -o-animation: spinnerRotate 5s infinite linear;
+    -ms-animation: spinnerRotate 5s infinite linear;
+    -moz-animation: spinnerRotate 5s infinite linear;
+    animation: spinnerRotate 5s infinite linear;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        transform: translateY(-5px)
+    }
+    50% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(-5px)
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-5px)
+    }
+    50% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(-5px)
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+@font-face {
+    font-family: 'Compadre';
+    src: url('fonts/Compadre-Narrow.eot');
+    src: url('fonts/Compadre-Narrow.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Compadre-Narrow.woff2') format('woff2'),
+    url('fonts/Compadre-Narrow.woff') format('woff'),
+    url('fonts/Compadre-Narrow.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Compadre Extended';
+    src: url('fonts/Compadre-Extended.eot');
+    src: url('fonts/Compadre-Extended.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Compadre-Extended.woff2') format('woff2'),
+    url('fonts/Compadre-Extended.woff') format('woff'),
+    url('fonts/Compadre-Extended.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Cheee Small';
+    src: url('fonts/Cheee-Small.eot');
+    src: url('fonts/Cheee-Small.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Cheee-Small.woff2') format('woff2'),
+    url('fonts/Cheee-Small.woff') format('woff'),
+    url('fonts/Cheee-Small.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ohno Fatface 18 Condensed';
+    src: url('fonts/OhnoFatface-18PtCondensed.eot');
+    src: url('fonts/OhnoFatface-18PtCondensed.eot?#iefix') format('embedded-opentype'),
+    url('fonts/OhnoFatface-18PtCondensed.woff2') format('woff2'),
+    url('fonts/OhnoFatface-18PtCondensed.woff') format('woff'),
+    url('fonts/OhnoFatface-18PtCondensed.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #FEEBDA;
+    overflow-x: hidden;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+a,
+p,
+label,
+span,
+h1,
+h2,
+h3,
+h4 {
+    color: #000035;
+}
+
+p {
+    font-size: 34px;
+    font-family: 'Compadre';
+    letter-spacing: -2px;
+    line-height: 125%;
+    margin: 10px 0;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a.active,
+.active,
+.menu li a.active {
+    text-decoration: underline;
+}
+
+hr {
+    height: 3px;
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #ffdebf;
+    border: none;
+}
+
+.blue-bg {
+    background-color: #000035;
+}
+
+.blue-bg * {
+    color: #ffffff;
+}
+
+.orange-bg {
+    background-color: #FF5400;
+}
+
+button {
+    cursor: pointer;
+    -webkit-appearance: none;
+    height: 60px;
+    border-radius: 10px;
+    min-width: 220px;
+    color: #000035;
+    background-color: #ffffff;
+    border: 3px solid #000035;
+    font-size: 20px;
+    font-family: 'Compadre';
+    letter-spacing: -1px;
+}
+
+button:hover {
+    color: #ffffff;
+    background-color: #000035;
+}
+
+h1 {
+    font-size: 175px;
+    font-family: 'Ohno Fatface 18 Condensed';
+    letter-spacing: 0;
+    line-height: 75%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 145px;
+    font-family: 'Ohno Fatface 18 Condensed';
+    letter-spacing: 2px;
+    line-height: 85%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 28px;
+    font-family: 'Cheee Small';
+    letter-spacing: -1px;
+    line-height: 100%;
+    margin: 15px 0;
+}
+
+h4 {
+    font-size: 96px;
+    font-family: 'Ohno Fatface 18 Condensed';
+    line-height: 85%;
+    margin: 30px 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    z-index: 10;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFDEBF;
+    border-bottom: 3px solid #000035;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 30px;
+}
+
+nav a {
+    font-size: 38px;
+    font-family: 'Ohno Fatface 18 Condensed';
+    letter-spacing: -1px;
+}
+
+nav div:nth-child(1),
+nav div:nth-child(3) {
+    flex: 1;
+}
+
+nav .button-holder {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mobile {
+    display: none;
+}
+
+.left,
+.right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left img,
+.right img {
+    opacity: 0;
+}
+
+.side-padding {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.marquee {
+    z-index: 9;
+    height: 150px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -2px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #ffffff;
+    border-top: 3px solid #000035;
+    border-bottom: 3px solid #000035;
+}
+
+.marquee:hover .marquee-inner {
+    animation-play-state: paused;
+}
+
+.marquee-inner {
+    display:inline-block;
+    font-size: 45px;
+    font-family: 'Compadre Extended';
+    letter-spacing: -3px;
+    padding-left: 100%;
+    will-change: transform;
+    animation: marquee 30s linear infinite;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+    min-height: 100%;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    border-top: 3px solid #000035;
+    align-items: center;
+    padding: 60px 30px;
+}
+
+footer a {
+    font-size: 32px;
+    font-family: 'Compadre';
+    letter-spacing: -1px;
+    line-height: 150%;
+}
+
+footer p {
+    font-size: 28px;
+    font-family: 'Ohno Fatface 18 Condensed';
+    letter-spacing: 0px;
+    line-height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer .right {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#hero .right {
+    background-image: url("barker-hero-img-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero svg,
+.why-barker-text svg {
+    position: absolute;
+}
+
+#hero svg.ball-hero,
+.why-barker-text svg.ball-hero {
+    z-index: 1;
+    -webkit-animation: bounce 1s infinite ease-in-out;
+    -o-animation: bounce 1s infinite ease-in-out;
+    -ms-animation: bounce 1s infinite ease-in-out;
+    -moz-animation: bounce 1s infinite ease-in-out;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+#hero svg.ball-hero {
+    height: 250px;
+    width: 250px;
+    right: -10%;
+    bottom: 5%;
+}
+
+.why-barker-text svg.ball-hero {
+    height: 200px;
+    width: 200px;
+    right: -10%;
+    top: 2%;
+}
+
+#hero svg.spiral-sm {
+    height: 120px;
+    width: 120px;
+    bottom: 20%;
+    left: 10%;
+}
+
+#why-barker #hero svg.spiral-sm {
+    bottom: 10%;
+}
+
+.why-barker-text svg.spiral-sm {
+    height: 120px;
+    width: 120px;
+    top: 15%;
+    left: 5%;
+}
+
+#hero svg.spiral-lg {
+    height: 150px;
+    width: 150px;
+    top: 20%;
+    right: 10%;
+}
+
+#why-barker #hero svg.spiral-lg {
+    top: 15%;
+}
+
+#feature-1 .left {
+    background-image: url("barker-hero-img-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+#feature-2 .right {
+    background-image: url("barker-hero-img-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+#feature-1 .right,
+#feature-2 .left {
+    background-color: #000035;
+}
+
+#feature-1 .right h2,
+#feature-1 .right p,
+#feature-2 .left h2,
+#feature-2 .left p  {
+    color: #ffffff;
+}
+
+.info-box {
+    height: 145px;
+    width: 500px;
+    display: flex;
+    margin: 60px 0;
+    background-color: #ffffff;
+    border: 3px solid #FF5400;
+}
+
+#feature-1 .info-box .left,
+#feature-2 .info-box .left {
+    background-image: none;
+    background-color: #ffffff;
+    max-width: 100px;
+}
+
+#feature-2 .info-box .right {
+    background-image: none;
+}
+
+#feature-1 .info-box .right,
+#feature-2 .info-box .right {
+    background-color: #ffffff;
+    border-left: 3px solid #FF5400;
+    flex: 1;
+}
+
+#feature-1 .info-box .left p,
+#feature-2 .info-box .left p {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #000035;
+    //-webkit-text-stroke-width: 3px;
+    //-webkit-text-stroke-color: #000035;
+    font-size: 70px;
+    font-family: 'Cheee Small';
+}
+
+#feature-1 .info-box .right p,
+#feature-2 .info-box .right p {
+    color: #000035;
+    font-size: 21px;
+    font-family: 'Compadre';
+    letter-spacing: -1px;
+    line-height: 150%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#feature-1 .info-box .right p:first-child,
+#feature-2 .info-box .right p:first-child {
+    padding-top: 25px;
+}
+
+#feature-1 .info-box .right p:last-child,
+#feature-2 .info-box .right p:last-child {
+    padding-bottom: 25px;
+}
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #FF5400;
+}
+
+#testimonials .testimonial-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#testimonials .testimonial {
+    width: 100%;
+}
+
+#testimonials span {
+    font-size: 28px;
+    font-family: 'Cheee Small';
+}
+
+#testimonials p {
+    font-size: 130px;
+    font-family: 'Ohno Fatface 18 Condensed';
+    letter-spacing: -1px;
+    line-height: 85%;
+    margin: 45px 0;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+#testimonials label {
+    font-size: 32px;
+    font-family: 'Compadre';
+    letter-spacing: -1px;
+    margin: 30px 0;
+}
+
+#testimonials svg {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: 0;
+}
+
+#testimonials .ball-1 {
+    transform: rotate(5deg);
+    left: -2%;
+    bottom: -8%;
+}
+
+#testimonials .ball-2 {
+    transform: rotate(185deg);
+    right: -2%;
+    bottom: -1%;
+}
+
+#testimonials .ball-3 {
+    transform: rotate(90deg);
+    left: 5%;
+    bottom: -2%;
+}
+
+#testimonials .ball-4 {
+    transform: rotate(35deg);
+    left: 15%;
+    bottom: -11%;
+}
+
+#testimonials .ball-5 {
+    transform: rotate(145deg);
+    left: 25%;
+    bottom: -6%;
+}
+
+#testimonials .ball-6 {
+    transform: rotate(55deg);
+    left: 35%;
+    bottom: -7%;
+}
+
+#testimonials .ball-7 {
+    transform: rotate(65deg);
+    left: 45%;
+    bottom: -8%;
+}
+
+#testimonials .ball-8 {
+    transform: rotate(175deg);
+    left: 55%;
+    bottom: -4%;
+}
+
+#testimonials .ball-9 {
+    transform: rotate(5deg);
+    left: 65%;
+    bottom: -6%;
+}
+
+#testimonials .ball-10 {
+    transform: rotate(85deg);
+    left: 75%;
+    bottom: -3%;
+}
+
+#testimonials .ball-11 {
+    transform: rotate(55deg);
+    left: 85%;
+    bottom: -9%;
+}
+
+#testimonials .ball-12 {
+    transform: rotate(120deg);
+    left: 95%;
+    bottom: -3%;
+}
+
+#testimonials .ball-13 {
+    transform: rotate(40deg);
+    left: 40%;
+    bottom: -11%;
+}
+
+#testimonials .ball-14 {
+    transform: rotate(160deg);
+    left: 70%;
+    bottom: -9%;
+}
+
+.flickity-button {
+    display: none !important;
+}
+
+.flickity-page-dots .dot {
+    background: #FFDEBF;
+}
+
+#why-barker #hero .right {
+    background-image: url("barker-why-barker-1.jpg");
+}
+
+#why-barker section.why-barker-text {
+    height: initial;
+    min-height: initial;
+    justify-content: center;
+}
+
+.why-barker-inner-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.why-barker-inner-container a {
+    text-decoration: underline;
+}
+
+.simple-page h1 {
+    margin-top: 120px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee {
+        white-space: normal
+    }
+    .marquee .marquee-inner {
+        animation-iteration-count: 1;
+        animation-duration: 0.01;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    p {
+        line-height: 140%;
+    }
+
+    #nav-toggle {
+        position: absolute;
+        opacity: 0;
+        display: none;
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100%;
+        width: 250px;
+    }
+
+    #nav-toggle ~ label {
+        height: 60px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        display: block;
+        background-color: #feebda;
+        border: 3px solid #feebda;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: 'Compadre';
+        text-align: center;
+        line-height: 60px;
+        letter-spacing: -1px;
+        transition: 0.5s transform;
+        transition-timing-function: cubic-bezier(0.38, 0.52, 0.37, 1.27);
+    }
+
+    #nav-toggle ~ label > span {
+        color: #000035;
+    }
+
+    #nav-toggle:checked ~ label {
+        background-color: #FF5400;
+        border-color: #FF5400;
+        color: white;
+        transform: translateX(250px);
+    }
+
+    #nav-toggle:checked ~ label::before {
+        content: "Close";
+    }
+
+    #nav-toggle:checked ~ label .toggle-words {
+        display: none;
+    }
+
+    #nav-toggle:checked ~ .menu {
+        transform: translateX(100vw);
+    }
+
+    .menu {
+        cursor: pointer;
+        background-color: #000035;
+        transition: 0.53s transform;
+        transition-timing-function: cubic-bezier(0.38, 0.52, 0.37, 1);
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li {
+        list-style: none;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 10px 20px;
+        display: block;
+    }
+
+    .menu li a:hover {
+        color: #FF5400;
+    }
+
+    nav .menu ul li:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    nav {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    nav .logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav .menu-desktop {
+        display: none;
+    }
+
+    button {
+        min-width: 160px;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .left img,
+    .right img {
+        opacity: 1;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .side-padding {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    h1 {
+        font-size: 74px;
+    }
+
+    #why-barker h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 58px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    section {
+        overflow: hidden;
+    }
+
+    #hero,
+    #feature-1,
+    #feature-2,
+    #testimonials {
+        height: auto;
+        min-height: initial;
+        flex-direction: column;
+    }
+
+    #hero .left {
+        height: 600px;
+    }
+
+    #hero .right {
+        padding-bottom: 60px;
+    }
+
+    #hero .right,
+    #why-barker #hero .right,
+    #feature-1 .left,
+    #feature-2 .right {
+        background-image: none;
+        background-repeat: initial;
+        background-size: initial;
+        background-position: initial;
+    }
+
+    #feature-1 .right,
+    #feature-2 .left {
+        padding: 90px 30px;
+    }
+
+    #feature-1 .left,
+    #feature-2 .right {
+        background-color: #000035;
+    }
+
+    #feature-1 .left img {
+        max-width: 350px;
+        margin: 30px auto 0 40px;
+    }
+
+    #feature-2 .right img {
+        max-width: 390px;
+        margin: 0 20px 40px auto;
+    }
+
+    #why-barker #hero .right img {
+        max-width: 355px;
+    }
+
+    .info-box {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    #feature-1 .info-box .right,
+    #feature-2 .info-box .left {
+        padding: initial;
+    }
+
+    #hero .right img {
+        max-width: 250px;
+        margin-left: 90px;
+    }
+
+    #hero svg.spiral-sm {
+        height: 80px;
+        width: 80px;
+        bottom: 10%;
+        left: 5%;
+    }
+
+    #hero svg.spiral-lg {
+        height: 90px;
+        width: 90px;
+        right: 4%;
+    }
+
+    #why-barker #hero svg.spiral-lg {
+        top: 15%;
+    }
+
+    #hero svg.ball-hero {
+        height: 170px;
+        width: 170px;
+        right: -5%;
+        bottom: -5%;
+    }
+
+    .marquee {
+        height: 90px;
+    }
+
+    .marquee-inner {
+        font-size: 32px;
+    }
+
+    #testimonials {
+        padding: 90px 0 100px;
+    }
+
+    #testimonials p {
+        font-size: 54px;
+        line-height: 75%;
+        margin: 30px 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #testimonials label {
+        font-size: 20px;
+    }
+
+    #testimonials span {
+        font-size: 18px;
+    }
+
+    #testimonials svg {
+        width: 105px;
+        height: 105px;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    footer a {
+        font-size: 28px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+
+    footer .right {
+        justify-content: flex-start;
+    }
+
+    footer .right ul {
+        margin-bottom: 0;
+    }
+
+    footer .right ul:nth-child(1) {
+        margin-right: 60px;
+    }
+
+    .why-barker-inner-container {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    .why-barker-inner-container p,
+    .why-barker-inner-container h4 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .why-barker-text svg.spiral-sm {
+        height: 85px;
+        width: 85px;
+        top: 13%;
+        left: 3%;
+    }
+
+    .why-barker-text svg.ball-hero {
+        height: 90px;
+        width: 90px;
+        right: 2%;
+        top: 6%;
+    }
+
+    h4 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    .simple-page h1 {
+        margin-top: 120px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 0;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 980px) {
+    h1 {
+        font-size: 58px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    nav a,
+    footer a {
+        font-size: 22px;
+    }
+
+    section#hero {
+        height: 60vh;
+    }
+
+    #hero svg.spiral-lg {
+        height: 110px;
+        width: 110px;
+    }
+
+    #hero svg.spiral-sm {
+        height: 95px;
+        width: 95px;
+    }
+
+    #hero svg.ball-hero {
+        height: 145px;
+        width: 145px;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+
+    #testimonials p {
+        font-size: 60px;
+        line-height: 75%;
+        margin: 30px 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .why-barker-text svg.spiral-sm {
+        height: 100px;
+        width: 100px;
+        top: 20%;
+        left: 5%;
+    }
+
+    .why-barker-text svg.ball-hero {
+        height: 120px;
+        width: 120px;
+        right: 4%;
+        top: 5%;
+    }
+
+    h4 {
+        font-size: 54px;
+    }
+
+    p {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1280px) {
+    h1 {
+        font-size: 76px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    nav a,
+    footer a {
+        font-size: 28px;
+    }
+
+    section#hero {
+        height: 80vh;
+    }
+
+    #testimonials p {
+        font-size: 52px;
+        line-height: 75%;
+        margin: 30px 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+    nav ul li:not(:first-child) {
+        margin-left: 15px;
+    }
+
+    button {
+        min-width: 190px;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    section {
+        height: 50vh;
+        min-height: initial;
+    }
+
+    #hero svg.ball-hero {
+        height: 170px;
+        width: 170px;
+    }
+
+    .marquee {
+        height: 105px;
+    }
+
+    .marquee-inner {
+        font-size: 36px;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+
+    #testimonials {
+        padding: 30px 0 150px;
+    }
+
+    #testimonials label {
+        font-size: 24px;
+    }
+
+    #testimonials span {
+        font-size: 20px;
+    }
+
+    #testimonials svg {
+        width: 190px;
+        height: 190px;
+    }
+
+    .why-barker-inner-container {
+        max-width: 100%;
+    }
+
+    .simple-page h1,
+    .why-barker-inner-container p,
+    .why-barker-inner-container h4 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .simple-page h1 {
+        margin-top: 120px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1500px) {
+    h1 {
+        font-size: 100px;
+    }
+
+    #why-barker h1 {
+        font-size: 88px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 1501px) and (max-width: 2000px) {
+    h1 {
+        font-size: 140px;
+    }
+
+    #why-barker h1 {
+        font-size: 100px;
+    }
+
+    #testimonials span {
+        margin-top: -90px;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 1900px) {
+
+    h2 {
+        font-size: 100px;
+    }
+
+    #testimonials {
+        padding: 20px 120px;
+        height: 700px;
+    }
+
+    #testimonials p {
+        font-size: 64px;
+        padding-left: 90px;
+        padding-right: 90px;
+        margin: 20px 0;
+    }
+
+    #testimonials svg {
+        width: 220px;
+        height: 220px;
+    }
+
+    section {
+        height: 80vh;
+        min-height: initial;
+    }
+
+    section#hero {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 2001px) {
+
+    #why-barker h1 {
+        font-size: 145px;
+    }
+
+    #testimonials span {
+        margin-top: -120px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    section#why-barker {
+        overflow: hidden;
+    }
+
+}
+
+@media screen and (orientation : landscape) {
+    section {
+        height: 100vh;
+    }
+}
