@@ -706,7 +706,9 @@ footer .right {
         height: 60px;
         cursor: pointer;
         -webkit-appearance: none;
-        display: block;
+        display: inline-flex;
+        padding-left: 30px;
+        padding-right: 30px;
         background-color: #feebda;
         border: 3px solid #feebda;
         border-radius: 10px;
@@ -992,6 +994,7 @@ footer .right {
     }
 
     .why-barker-inner-container p,
+    .why-barker-inner-container h2,
     .why-barker-inner-container h4 {
         padding-left: 30px;
         padding-right: 30px;
