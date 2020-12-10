@@ -464,7 +464,6 @@ footer .right {
 #feature-1 .info-box .right,
 #feature-2 .info-box .right {
     background-color: #ffffff;
-    border-left: 3px solid #FF5400;
     flex: 1;
 }
 
